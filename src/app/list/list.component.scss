@@ -1,0 +1,45 @@
+:host {
+    flex: 1;
+    max-height: 60%;
+    overflow-y: auto;
+}
+
+mat-toolbar-row + mat-toolbar-row {
+    margin-top: 5px;
+}
+
+mat-toolbar-row {
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 97%);
+    
+    a {
+        text-decoration: none;
+    }
+}
+
+mat-toolbar {
+    background-color: transparent;
+    padding: 0 5px;
+    
+    .selected {
+        background-color: white;
+    }
+}
+
+.list-item-wrapper {
+    display: flex;
+    flex-flow: row;
+}
+
+.fill-spacer {
+    flex: 1 1 auto;
+}
+
+.date {
+    font-size: 14px;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+}

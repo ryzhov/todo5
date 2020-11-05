@@ -1,0 +1,19 @@
+version:  '3.7'
+
+services:
+  front:
+    container_name: ${CONTAINER_NAME}
+    image: ${DEV_IMAGE}
+    hostname: ${APP_NAME}
+    working_dir: ${APP_PATH}
+    command: ["sleep.js"]
+    volumes:
+      - /home/${USER_NAME}:/home/${USER_NAME}
+      - ./:${APP_PATH}
+    ports:
+      - "4200:4200"
+
+networks:
+  default:
+    driver: bridge
+    name: ${NAMESPACE}

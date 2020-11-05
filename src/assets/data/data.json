@@ -1,0 +1,294 @@
+{
+  "data": [
+    [
+      "Ad Set 1",
+      39110,
+      283,
+      0.72,
+      60,
+      21.2,
+      37,
+      36,
+      60,
+      5,
+      5,
+      8.33,
+      42,
+      542.605,
+      236.879824,
+      43.65,
+      9.0434,
+      3.9479,
+      108.521
+    ],
+    [
+      "Ad Set 2",
+      3779,
+      50,
+      1.32,
+      78,
+      156,
+      42,
+      41,
+      52.56,
+      2,
+      2,
+      2.56,
+      13,
+      10.5,
+      61.772346,
+      588.3,
+      0.1346,
+      0.7919,
+      5.25
+    ],
+    [
+      "Ad Set 3",
+      3384,
+      49,
+      1.44,
+      70,
+      142.85,
+      38,
+      38,
+      54.28,
+      2,
+      2,
+      2.85,
+      4,
+      414.4,
+      85.868,
+      20.72,
+      5.92,
+      1.2266,
+      207.2
+    ],
+    [
+      "Ad Set 4",
+      6658,
+      123,
+      1.84,
+      60,
+      48.78,
+      36,
+      35,
+      58.33,
+      2,
+      2,
+      3.33,
+      3,
+      109.2,
+      26.01,
+      23.81,
+      1.82,
+      0.4335,
+      54.6
+    ],
+    [
+      "Ad Set 5",
+      5263,
+      94,
+      1.78,
+      48,
+      51.06,
+      27,
+      26,
+      54.16,
+      0,
+      0,
+      0,
+      2,
+      196.5,
+      29.25,
+      14.88,
+      4.0937,
+      0.6093,
+      0
+    ],
+    [
+      "Ad Set 6",
+      4677,
+      82,
+      1.75,
+      46,
+      56.09,
+      29,
+      28,
+      60.86,
+      2,
+      2,
+      4.34,
+      7,
+      12.4,
+      278.6799,
+      2247.41,
+      0.2695,
+      6.0582,
+      6.2
+    ],
+    [
+      "Ad Set 7",
+      3860,
+      71,
+      1.83,
+      41,
+      57.74,
+      16,
+      16,
+      39.02,
+      3,
+      3,
+      7.31,
+      7,
+      49.2,
+      157.9646,
+      321.06,
+      1.2,
+      3.8527,
+      16.4
+    ]
+  ],
+  "meta": {
+    "total": {
+      "impressions": 66731,
+      "clicks": 752,
+      "ctr": 1.12,
+      "installs": 403,
+      "cr0": 53.59,
+      "register": 225,
+      "register_unique": 220,
+      "cr1": 54.59,
+      "ftd": 16,
+      "ftd_unique": 16,
+      "cr2": 3.97,
+      "af_purchase": 78,
+      "spent": 1334.805,
+      "revenue": 876.42467,
+      "roas": 65.65,
+      "ecpi": 3.3121,
+      "arpu": 2.1747,
+      "cpt": 83.4253
+    },
+    "columns": [
+      {
+        "type": "entity",
+        "key": "ad_set",
+        "title": "Ad Set",
+        "primary": true
+      },
+      {
+        "type": "metric",
+        "key": "impressions",
+        "metricType": "absolute",
+        "title": "Impressions"
+      },
+      {
+        "type": "metric",
+        "key": "clicks",
+        "metricType": "absolute",
+        "title": "Clicks"
+      },
+      {
+        "type": "metric",
+        "key": "ctr",
+        "metricType": "relative",
+        "title": "CTR %"
+      },
+      {
+        "type": "metric",
+        "key": "installs",
+        "metricType": "absolute",
+        "title": "Installs"
+      },
+      {
+        "type": "metric",
+        "key": "cr0",
+        "metricType": "relative",
+        "title": "CR0 %"
+      },
+      {
+        "type": "metric",
+        "key": "register",
+        "metricType": "absolute",
+        "title": "Register"
+      },
+      {
+        "type": "metric",
+        "key": "register_unique",
+        "metricType": "absolute",
+        "title": "Unique Register"
+      },
+      {
+        "type": "metric",
+        "key": "cr1",
+        "metricType": "relative",
+        "title": "CR1 %"
+      },
+      {
+        "type": "metric",
+        "key": "ftd",
+        "metricType": "absolute",
+        "title": "FTD"
+      },
+      {
+        "type": "metric",
+        "key": "ftd_unique",
+        "metricType": "absolute",
+        "title": "Unique FTD"
+      },
+      {
+        "type": "metric",
+        "key": "cr2",
+        "metricType": "relative",
+        "title": "CR2 %"
+      },
+      {
+        "type": "metric",
+        "key": "af_purchase",
+        "metricType": "absolute",
+        "title": "Purchases"
+      },
+      {
+        "type": "metric",
+        "key": "spent",
+        "metricType": "money",
+        "title": "Spend",
+        "currency": "USD"
+      },
+      {
+        "type": "metric",
+        "key": "revenue",
+        "metricType": "money",
+        "title": "NetRevenue",
+        "currency": "USD"
+      },
+      {
+        "type": "metric",
+        "key": "roas",
+        "metricType": "relative",
+        "title": "ROAS %"
+      },
+      {
+        "type": "metric",
+        "key": "ecpi",
+        "metricType": "money",
+        "title": "eCPI",
+        "currency": "USD"
+      },
+      {
+        "type": "metric",
+        "key": "arpu",
+        "metricType": "money",
+        "title": "ARPU",
+        "currency": "USD"
+      },
+      {
+        "type": "metric",
+        "key": "cpt",
+        "metricType": "money",
+        "title": "CPT",
+        "currency": "USD"
+      }
+    ]
+  }
+}
