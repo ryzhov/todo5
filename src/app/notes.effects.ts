@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { EMPTY, of } from 'rxjs';
-import { map, mergeMap, catchError, concatMap, withLatestFrom, tap } from 'rxjs/operators';
+import { EMPTY } from 'rxjs';
+import { map, mergeMap, catchError, tap } from 'rxjs/operators';
 import { NotesService } from './notes.service';
 import * as NotesActions from './notes.actions';
 import { getNotes } from './getters';
@@ -20,14 +20,14 @@ export class NotesEffects {
         )
     ));
 
-    mutationNotes$ = createEffect(() => this.actions$.pipe(
+    saveNotes$ = createEffect(() => this.actions$.pipe(
         ofType(NotesActions.create, NotesActions.update, NotesActions.remove),
-        concatMap(action => of(action).pipe(
-            withLatestFrom(this.store.select(getNotes))
-        )),
-        tap(([action, notes]) => {
-            this.notesService.setAll(notes);
-        })
+        mergeMap(() => this.store.select(getNotes)
+            .pipe(
+                tap(notes => this.notesService.setAll(notes)),
+                catchError(() => EMPTY)
+            )
+        )
     ), { dispatch: false });
 
     constructor(
