@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgModule } from '@angular/core';
 import { RootComponent } from './root.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -32,7 +33,8 @@ import { metaReducers } from './app/meta.reducers';
     imports: [
         StoreModule.forRoot(appReducers, { metaReducers }),
         EffectsModule.forRoot([NotesEffects]),
-        BrowserModule,
+        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        TransferHttpCacheModule,
         HttpClientModule,
         BrowserAnimationsModule,
         MatInputModule,
@@ -45,8 +47,10 @@ import { metaReducers } from './app/meta.reducers';
     bootstrap: [ RootComponent ],
 })
 export class AppModule {
-    constructor() {
-        const { language: locale } = window.navigator;
-        console.log('locale => ', locale);
+    constructor(private readonly httpClient: HttpClient) {
+        httpClient.get('/api/env').subscribe({
+            next: res => console.log('appModule:: env => ', res),
+            error: err => console.error(err),
+        });
     }
 }
