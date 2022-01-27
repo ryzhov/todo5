@@ -1,19 +1,21 @@
 version:  '3.7'
 
 services:
-  front:
-    container_name: ${CONTAINER_NAME}
+  dev:
     image: ${DEV_IMAGE}
     hostname: ${APP_NAME}
     working_dir: ${APP_PATH}
     command: ["sleep.js"]
+    environment:
+      - PATH=${PATH}
     volumes:
       - /home/${USER_NAME}:/home/${USER_NAME}
       - ./:${APP_PATH}
+      - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - "4200:4200"
-
+      - "3000:3000"
 networks:
   default:
     driver: bridge
-    name: ${NAMESPACE}
+    name: web
